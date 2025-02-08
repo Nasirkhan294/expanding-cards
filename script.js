@@ -1,14 +1,16 @@
-const slats = document.querySelectorAll('.slat');
+const cards = document.querySelectorAll('.card');
 
-slats.forEach(slat => {
-    slat.addEventListener('click', () => {
-        removeActiveClasses();
-        slat.classList.add('active');
-    })
+// Remove the active from previous card and add to the targeted one
+cards.forEach((card) => {
+	card.addEventListener('click', () => {
+		removeActiveClass();
+		card.classList.add('active');
+	});
 });
 
-const removeActiveClasses = () => {
-    slats.forEach(slat => {
-        slat.classList.remove('active');
-    })
+// Remove the active class
+function removeActiveClass() {
+	cards.forEach((card) => {
+		card.classList.remove('active');
+	});
 }
